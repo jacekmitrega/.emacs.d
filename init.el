@@ -9,6 +9,8 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
+(add-to-list 'package-archives
+             '("elpy" . "http://jorgenschaefer.github.io/packages/"))
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -80,3 +82,8 @@
 ;; Disable backups and auto-save
 (setq backup-inhibited t)
 (setq auto-save-default nil)
+
+
+;;; Elpy
+(package-install-needed '(elpy))
+(elpy-enable)
