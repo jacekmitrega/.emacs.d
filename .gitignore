@@ -30,3 +30,9 @@ tramp
 
 # cask packages
 .cask/
+
+# saveplace
+saved-places
+
+# central location for backups
+backups
