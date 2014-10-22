@@ -5,6 +5,24 @@
 (load custom-file)
 
 
+;;; Packages
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defun package-install-needed (packages)
+  "Install needed packages unless already installed."
+  (dolist
+      (package packages)
+    (unless (package-installed-p package)
+      (package-install package)))
+  )
+
+
 ;;; Keys
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
