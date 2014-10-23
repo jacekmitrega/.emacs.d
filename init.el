@@ -5,6 +5,24 @@
 (load custom-file)
 
 
+;;; Set visuals as early as possible to avoid momentary display.
+(add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
+(load-theme 'zenburn t)
+
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'tooltip-mode) (tooltip-mode -1))
+(if window-system
+  (progn
+    (if (fboundp 'menu-bar-mode) (menu-bar-mode 1))
+    (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 1))
+    )
+  (progn
+    (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+    (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+    )
+  )
+
+
 ;;; Packages
 (require 'package)
 (add-to-list 'package-archives
