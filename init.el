@@ -84,6 +84,12 @@
 (setq-default indent-tabs-mode nil)
 
 
+;;; Line truncating|wrapping and fill column
+(setq-default truncate-lines t)
+(setq truncate-partial-width-windows t)
+(setq fill-column 80)
+
+
 ;;; Enable commands disabled by default
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
