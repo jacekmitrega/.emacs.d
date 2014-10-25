@@ -76,6 +76,10 @@
 (setq save-place-file (concat user-emacs-directory "saved-places"))
 
 
+;;; Auto revert buffer.
+(global-auto-revert-mode 1)
+
+
 ;;; Selection
 (delete-selection-mode 1)
 
