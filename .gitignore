@@ -36,3 +36,6 @@ saved-places
 
 # central location for backups
 backups
+
+# place for local config files
+/local/*.el

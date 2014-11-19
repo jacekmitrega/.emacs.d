@@ -115,3 +115,9 @@
 ;;; Elpy
 (package-install-needed '(elpy))
 (elpy-enable)
+
+
+;;; Load local configuration.
+(package-install-needed '(load-dir))
+(require 'load-dir)
+(load-dir-one (concat user-emacs-directory "local"))
