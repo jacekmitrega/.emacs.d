@@ -117,6 +117,11 @@
 (elpy-enable)
 
 
+;;; Find file in repository
+(package-install-needed '(find-file-in-repository))
+(global-set-key (kbd "C-x f") 'find-file-in-repository)
+
+
 ;;; Load local configuration.
 (package-install-needed '(load-dir))
 (require 'load-dir)
