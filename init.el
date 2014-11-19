@@ -122,6 +122,17 @@
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
 
 
+;;; Add vendor dir to load path
+(add-to-list 'load-path (concat user-emacs-directory "vendor"))
+
+
+;;; Auto-shell-command
+(package-install-needed '(deferred popwin))
+; (package-install-needed '(auto-shell-command))
+(load "auto-shell-command.el")
+(require 'auto-shell-command)
+
+
 ;;; Load local configuration.
 (package-install-needed '(load-dir))
 (require 'load-dir)
