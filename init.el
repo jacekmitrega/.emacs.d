@@ -134,6 +134,9 @@
 
 
 ;;; Load local configuration.
-(package-install-needed '(load-dir))
+(package-install-needed '(load-dir yasnippet))
 (require 'load-dir)
 (load-dir-one (concat user-emacs-directory "local"))
+(require 'yasnippet)
+(add-to-list 'yas-snippet-dirs (concat user-emacs-directory "local/snippets"))
+(yas-reload-all)
