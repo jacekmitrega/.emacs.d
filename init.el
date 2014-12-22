@@ -22,6 +22,8 @@
     )
   )
 
+(global-hl-line-mode 1)
+
 
 ;;; Packages
 (require 'package)
