@@ -22,6 +22,17 @@
     )
   )
 
+;; Stronger highlight of the current bar.
+(set-face-attribute 'mode-line
+  nil
+  :foreground "gray80"
+  :background "darkblue"
+  :box '(:line-width 1 :style released-button))
+;; (set-face-attribute 'mode-line-inactive
+;;   nil
+;;   :foreground "gray30"
+;;   :background "gray25"
+;;   :box '(:line-width 1 :style released-button))
 (global-hl-line-mode 1)
 
 
