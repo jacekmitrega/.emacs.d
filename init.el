@@ -1,5 +1,10 @@
 ;;; init.el
 
+;; Set root user-emacs-directory to the one containing this init.el file.
+;; It allows emacs initialization from a custom directory with this command:
+;; emacs -q -l /path/to/.emacs.d/init.el
+(setq user-emacs-directory (file-name-directory load-file-name))
+
 ;;; Custom
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file)
