@@ -130,6 +130,10 @@
 (setq auto-save-default nil)
 
 
+;;; C
+(setq-default c-basic-offset 4)
+
+
 ;;; Elpy
 (package-install-needed '(elpy))
 (elpy-enable)
