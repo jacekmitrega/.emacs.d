@@ -162,3 +162,4 @@
 (require 'yasnippet)
 (add-to-list 'yas-snippet-dirs (concat user-emacs-directory "local/snippets"))
 (yas-reload-all)
+(yas-global-mode 1)
