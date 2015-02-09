@@ -106,6 +106,10 @@
 (setq-default indent-tabs-mode nil)
 
 
+;;; Whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+
 ;;; Line truncating|wrapping and fill column
 (setq-default truncate-lines t)
 (setq truncate-partial-width-windows t)
