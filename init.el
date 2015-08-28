@@ -134,6 +134,11 @@
 (setq auto-save-default nil)
 
 
+;;; Company mode
+(package-install-needed '(company))
+(add-hook 'after-init-hook 'global-company-mode)
+
+
 ;;; C
 (setq-default c-basic-offset 4)
 
@@ -157,6 +162,11 @@
 ; (package-install-needed '(auto-shell-command))
 (load "auto-shell-command.el")
 (require 'auto-shell-command)
+
+
+;;; Elixir
+(package-install-needed '(elixir-mode alchemist))
+(require 'alchemist)
 
 
 ;;; Load local configuration.
