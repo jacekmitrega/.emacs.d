@@ -39,3 +39,4 @@ backups
 
 # place for local config files
 /local/*.el
+ido.last
