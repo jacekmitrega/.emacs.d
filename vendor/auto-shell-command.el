@@ -4,7 +4,7 @@
 
 ;; Author: ongaeshi
 ;; Keywords: shell, save, async, deferred, auto
-;; Version: 1.0.0
+;; Version: 1.0.2
 ;; Package-Requires: ((deferred "20130312") (popwin "20130329"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -211,11 +211,19 @@
           (with-current-buffer (get-buffer-create ascmd:buffer-name)
             (delete-region (point-min) (point-max))
             (insert x)
-            (goto-char (point-max))
             (if (string-equal result "failed")
                 (display-buffer ascmd:buffer-name)
               (if (ascmd:window-popup-p) 
-                  (delete-window popwin:popup-window))))
+                  (delete-window popwin:popup-window)))
+            (save-selected-window
+              (let ((win (get-buffer-window (get-buffer-create ascmd:buffer-name))))
+                (if (not (null win))
+                    (progn
+                      (select-window win)
+                      (goto-char (point-max))
+                      (recenter -1)
+                      )
+                  ))))
           (ascmd:notify result)
           (pop ascmd:process-queue)
           (force-mode-line-update nil)
