@@ -176,6 +176,11 @@
 (require 'alchemist)
 
 
+;;; Qt
+(package-install-needed '(qml-mode))
+(require 'qml-mode)
+
+
 ;;; Load local configuration.
 (package-install-needed '(load-dir yasnippet))
 (require 'load-dir)
