@@ -27,6 +27,13 @@
     )
   )
 
+;; Add local bin dirs to PATH env var (they are not set on Mac OS X)
+(setenv "PATH"
+  (concat
+    "/usr/local/bin" ":"
+    "/usr/local/sbin" ":"
+    (getenv "PATH")))
+
 ;; Stronger highlight of the current bar.
 (set-face-attribute 'mode-line
   nil
