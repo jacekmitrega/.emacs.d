@@ -181,6 +181,10 @@
 (require 'qml-mode)
 
 
+;;; Fireplace
+(load (concat user-emacs-directory "vendor/fireplace/fireplace"))
+
+
 ;;; Load local configuration.
 (package-install-needed '(load-dir yasnippet))
 (require 'load-dir)
