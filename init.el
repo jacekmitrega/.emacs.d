@@ -182,7 +182,7 @@
 
 
 ;;; Fireplace
-(load (concat user-emacs-directory "vendor/fireplace/fireplace"))
+;(load (concat user-emacs-directory "vendor/fireplace/fireplace"))
 
 
 ;;; Load local configuration.
